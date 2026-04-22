@@ -36,8 +36,7 @@ vector<string> SplitString(string S1, string Delim)
 	return vString;
 }
 
-sClient ConvertLinetoRecord(string Line, string Seperator =
-	"#//#")
+sClient ConvertLinetoRecord(string Line, string Seperator ="#//#")
 {
 	sClient Client;
 	vector<string> vClientData;
@@ -49,8 +48,7 @@ sClient ConvertLinetoRecord(string Line, string Seperator =
 	Client.AccountBalance = stod(vClientData[4]);//cast string to double
 		return Client;
 }
-string ConvertRecordToLine(sClient Client, string Seperator =
-	"#//#")
+string ConvertRecordToLine(sClient Client, string Seperator ="#//#")
 {
 	string stClientRecord = "";
 	stClientRecord += Client.AccountNumber + Seperator;
@@ -89,8 +87,7 @@ void PrintClientCard(sClient Client)
 	cout << "\nAccount Balance: " << Client.AccountBalance;
 }
 
-bool FindClientByAccountNumber(string AccountNumber, vector
-	<sClient> vClients, sClient& Client)
+bool FindClientByAccountNumber(string AccountNumber, vector<sClient> vClients, sClient& Client)
 {
 	for (sClient C : vClients)
 	{
@@ -102,8 +99,7 @@ bool FindClientByAccountNumber(string AccountNumber, vector
 	}
 	return false;
 }
-bool MarkClientForDeleteByAccountNumber(string AccountNumber,
-	vector <sClient>& vClients)
+bool MarkClientForDeleteByAccountNumber(string AccountNumber,vector <sClient>& vClients)
 {
 	for (sClient& C : vClients)
 	{
@@ -116,8 +112,7 @@ bool MarkClientForDeleteByAccountNumber(string AccountNumber,
 	return false;
 }
 
-vector <sClient> SaveCleintsDataToFile(string FileName, vector
-	<sClient> vClients)
+vector <sClient> SaveCleintsDataToFile(string FileName, vector<sClient> vClients)
 {
 	fstream MyFile;
 	MyFile.open(FileName, ios::out);//overwrite
@@ -138,13 +133,11 @@ vector <sClient> SaveCleintsDataToFile(string FileName, vector
 	return vClients;
 }
 
-bool DeleteClientByAccountNumber(string AccountNumber, vector
-	<sClient>& vClients)
+bool DeleteClientByAccountNumber(string AccountNumber, vector<sClient>& vClients)
 {
 	sClient Client;
 	char Answer = 'n';
-	if (FindClientByAccountNumber(AccountNumber, vClients,
-		Client))
+	if (FindClientByAccountNumber(AccountNumber, vClients, Client))
 	{
 		PrintClientCard(Client);
 		cout << "\n\nAre you sure you want delete this client? y/n ? ";
@@ -177,8 +170,7 @@ string ReadClientAccountNumber()
 
 int main()
 {
-	vector <sClient> vClients =
-		LoadCleintsDataFromFile(ClientsFileName);
+	vector <sClient> vClients =LoadCleintsDataFromFile(ClientsFileName);
 	string AccountNumber = ReadClientAccountNumber();
 	DeleteClientByAccountNumber(AccountNumber, vClients);
 	system("pause>0");
