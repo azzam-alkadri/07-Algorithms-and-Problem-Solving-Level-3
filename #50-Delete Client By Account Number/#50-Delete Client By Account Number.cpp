@@ -144,8 +144,7 @@ bool DeleteClientByAccountNumber(string AccountNumber, vector<sClient>& vClients
 		cin >> Answer;
 		if (Answer == 'y' || Answer == 'Y')
 		{
-			MarkClientForDeleteByAccountNumber(AccountNumber,
-				vClients);
+			MarkClientForDeleteByAccountNumber(AccountNumber,	vClients);
 			SaveCleintsDataToFile(ClientsFileName, vClients);
 			//Refresh Clients
 			vClients = LoadCleintsDataFromFile(ClientsFileName);
@@ -155,8 +154,7 @@ bool DeleteClientByAccountNumber(string AccountNumber, vector<sClient>& vClients
 	}
 	else
 	{
-		cout << "\nClient with Account Number (" << AccountNumber
-			<< ") is Not Found!";
+		cout << "\nClient with Account Number (" << AccountNumber << ") is Not Found!";
 		return false;
 	}
 }
