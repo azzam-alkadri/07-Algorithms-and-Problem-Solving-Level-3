@@ -26,9 +26,9 @@ The main goals of this level were:
 
 ## Structure
 
-Key Problems: Each significant or complex problem is implemented in a dedicated folder for better focus and documentation.
-General Exercises: Standard problems are organized as standalone files to maintain a clean and efficient workspace.
-Solutions are organized clearly and follow consistent naming conventions.
+- Key Problems: Each significant or complex problem is implemented in a dedicated folder for better focus and documentation.
+- General Exercises: Standard problems are organized as standalone files to maintain a clean and efficient workspace.
+- Solutions are organized clearly and follow consistent naming conventions.
 
 ---
 
